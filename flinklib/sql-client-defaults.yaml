@@ -1,0 +1,8 @@
+execution:
+  planner: blink
+  type: batch
+  current-catalog: myhive
+catalogs:
+  - name: myhive
+    type: hive
+    hive-conf-dir: /opt/hive/conf
