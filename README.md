@@ -4,7 +4,7 @@
 
 ``` shell
 $ git clone git@github.com:lianxmfor/flink-hive.git
-$ git lfs pull
+$ cd flink-hive && git lfs pull
 ```
 
 2. start up docker compose:
