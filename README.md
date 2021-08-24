@@ -1,6 +1,13 @@
 # flink-hive
 
-1. start up docker compose:
+1. clone project
+
+``` shell
+$ git clone git@github.com:lianxmfor/flink-hive.git
+$ git lfs pull
+```
+
+2. start up docker compose:
 
 ``` shell
 $ docker compose up -d
@@ -20,7 +27,7 @@ $ docker compose up -d
  ⠿ Container flink-hive_kafka_1                      Started
 ```
 
-1. start in hive RETL, and create table
+3. start in hive RETL, and create table
 
 ``` shell
 $ docker exec -it hive-server /opt/hive/bin/beeline -u jdbc:hive2://localhost:10000
@@ -63,7 +70,7 @@ No rows affected (7.498 seconds)
 0: jdbc:hive2://localhost:10000> 
 ```
 
-1. flink
+4. flink
 
 ``` shell
 $ docker exec -ti flink bash
@@ -79,7 +86,7 @@ catalogs:
     hive-conf-dir: /opt/hive/conf
 ```
 
-1. start up sql client
+5. start up sql client
 
 ``` shell
 root@9a9985190163:/opt/flink# start-cluster.sh 
